@@ -7,8 +7,12 @@ namespace Teste
     {
         static void Main(string[] args)
         {
-            // Em struct Pode-se instanciar um objeto sem parâmetro ou com parâmetro
+            // Em struct pode-se instanciar um objeto sem parâmetro ou com parâmetro independentemente do construtor. 
+            // Assumindo os valores padrões do tipo (int = 0, bool = true, string = "" e os demais)
+            // Em class não se pode instanciar sem parâmetros no construtor se forem obrigatórios pelo construtor da classe
+
             var product = new Product(id: 1, name: "Playstation 5", price: 500.00);
+            // var product = new Product();
 
             var priceInReal = product.PriceInReal(5.45);
             Console.WriteLine(product);
