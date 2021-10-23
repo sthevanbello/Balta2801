@@ -9,43 +9,13 @@ namespace HtmlEditor
             Console.Clear();
             Console.ForegroundColor = ConsoleColor.Green;
             Console.BackgroundColor = ConsoleColor.Black;
-            DrawScreen();
+            Draw.DrawScreen(columns: 30, lines: 10);
             WriteOptions();
+            var option = short.Parse(Console.ReadLine());
+            HandleMenuOption(option);
+            
             Console.ReadKey();
         }
-
-        public static void DrawScreen()
-        {
-            Columns(50);
-            Body(lines: 20, columns: 50);
-            Columns(50);
-        }
-
-        private static void Body(int lines, int columns)
-        {
-            for (int i = 0; i <= lines; i++)
-            {
-                Console.Write("|");
-                for (int j = 0; j <= columns; j++)
-                {
-                    Console.Write(" ");
-                }
-                Console.Write("|");
-                Console.Write("\n");
-            }
-        }
-
-        private static void Columns(int columns)
-        {
-            Console.Write("+");
-            for (int i = 0; i <= columns; i++)
-            {
-                Console.Write("-");
-            }
-            Console.Write("+");
-            Console.Write("\n");
-        }
-
         public static void WriteOptions()
         {
             Console.SetCursorPosition(3, 2);
@@ -61,10 +31,37 @@ namespace HtmlEditor
             Console.SetCursorPosition(3, 7);
             Console.WriteLine("2 - Open file");
             Console.SetCursorPosition(3, 8);
-            Console.WriteLine("3 - Exit");
+            Console.WriteLine("-----------------------");
             Console.SetCursorPosition(3, 9);
+            Console.WriteLine("3 - Exit");
+            Console.SetCursorPosition(3, 10);
             Console.Write("Option: ");
+        }
 
+        public static void HandleMenuOption(short option)
+        {
+            switch (option)
+            {
+                case 1:
+                    {
+                        Editor.Show();
+                    }
+                    break;
+                case 2:
+                    {
+
+                    }
+                    break;
+                case 3:
+                    {
+                        Console.Clear();
+                        Environment.Exit(0);
+                    }
+                    break;
+                default:
+                    Show();
+                    break;
+            }
         }
     }
 }

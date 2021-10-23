@@ -87,7 +87,7 @@ namespace TextEditor
             {
                 file.Write(text);
             };
-            Console.WriteLine("Save success");
+            Console.WriteLine("Saved file with success");
             Thread.Sleep(2000);
             Menu();
         }
