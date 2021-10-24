@@ -13,7 +13,7 @@ namespace HtmlEditor
             WriteOptions();
             var option = short.Parse(Console.ReadLine());
             HandleMenuOption(option);
-            
+
             Console.ReadKey();
         }
         public static void WriteOptions()
@@ -49,7 +49,7 @@ namespace HtmlEditor
                     break;
                 case 2:
                     {
-
+                        
                     }
                     break;
                 case 3:
