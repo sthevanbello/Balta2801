@@ -1,3 +1,4 @@
+using System.IO;
 using System;
 
 namespace HtmlEditor
@@ -49,7 +50,7 @@ namespace HtmlEditor
                     break;
                 case 2:
                     {
-                        
+                        Viewer.Open();
                     }
                     break;
                 case 3:

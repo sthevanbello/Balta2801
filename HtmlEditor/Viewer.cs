@@ -1,10 +1,13 @@
 using System;
+using System.IO;
+using System.Text;
 using System.Text.RegularExpressions;
 
 namespace HtmlEditor
 {
     public static class Viewer
     {
+
 
         public static void Show(string text)
         {
@@ -46,5 +49,22 @@ namespace HtmlEditor
                 }
             }
         }
+
+        public static void Open(){
+            Console.SetCursorPosition(3, 13);
+            Console.Write("Enter the path file: ");
+            Console.SetCursorPosition(24, 13);
+            string path = Console.ReadLine();
+            var text = new StringBuilder();
+            
+            using(var file = File.OpenText(path)){
+
+                while(!file.EndOfStream){
+                    text.AppendLine(file.ReadLine());
+                }
+            }
+            Show(text.ToString());
+        }
     }
+
 }
