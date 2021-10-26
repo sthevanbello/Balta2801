@@ -3,7 +3,7 @@ using System.Text.RegularExpressions;
 
 namespace HtmlEditor
 {
-    public static class View
+    public static class Viewer
     {
 
         public static void Show(string text)
