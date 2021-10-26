@@ -9,8 +9,8 @@ namespace HtmlEditor
         public static void Show(string text)
         {
             Console.Clear();
-            Console.BackgroundColor = ConsoleColor.White;
-            Console.ForegroundColor = ConsoleColor.Black;
+            Console.BackgroundColor = ConsoleColor.Black;
+            Console.ForegroundColor = ConsoleColor.Green;
             Console.Clear();
             Console.WriteLine("MODO VISUALIZAÇÃO");
             Console.WriteLine("----------------------------------------");
@@ -40,7 +40,7 @@ namespace HtmlEditor
                 }
                 else
                 {
-                    Console.ForegroundColor = ConsoleColor.Black;
+                    Console.ForegroundColor = ConsoleColor.Green;
                     Console.Write(words[i]);
                     Console.Write(" ");
                 }

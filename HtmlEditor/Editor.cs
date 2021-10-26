@@ -13,8 +13,6 @@ namespace HtmlEditor
             Console.Clear();
             Console.WriteLine("Editor");
             Console.ForegroundColor = ConsoleColor.Green;
-            Console.BackgroundColor = ConsoleColor.DarkBlue;
-            // Draw.DrawScreen(columns: 50, lines: 15);
             Start();
 
         }
@@ -29,6 +27,7 @@ namespace HtmlEditor
                 text.Append(Environment.NewLine);
             } while (Console.ReadKey().Key != ConsoleKey.Escape);
             Save(text);
+            Viewer.Show(text.ToString());
             
 
         }
@@ -52,15 +51,14 @@ namespace HtmlEditor
                         }
                     }
                     Console.WriteLine("Saved file with success");
-                    Thread.Sleep(2000);
-                    Menu.Show();
+                    Thread.Sleep(500);
                     break;
                 case "n":
                     {
-                        Console.WriteLine("End of edit file");
+                        Console.WriteLine("End of file editor");
                     }
-                    Thread.Sleep(2000);
-                    Show();
+                    Thread.Sleep(500);
+                    Viewer.Show(text.ToString());
                     break;
                 default:
                     Save(text);
