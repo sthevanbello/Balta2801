@@ -1,4 +1,5 @@
-﻿using System;
+﻿using System.Runtime.CompilerServices;
+using System;
 
 namespace Data
 {
@@ -25,6 +26,23 @@ namespace Data
             Console.WriteLine(formatada3);
             Console.WriteLine(formatada4);
             Console.WriteLine(formatada5);
+
+            var dataAdd = DateTime.Now;
+            var newData = dataAdd.AddDays(30);
+            Console.WriteLine(newData);
+
+            dataAdd = DateTime.Now;
+            newData = dataAdd.AddMonths(6);
+            Console.WriteLine(newData);
+
+            dataAdd = DateTime.Now;
+            newData = dataAdd.AddYears(6);
+            Console.WriteLine(newData);
+            
+            newData = dataAdd.AddYears(-2);
+            Console.WriteLine(newData);
+
+
             Console.ReadKey();
         }
     }
