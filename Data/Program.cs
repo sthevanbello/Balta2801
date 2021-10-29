@@ -1,5 +1,6 @@
 ﻿using System.Runtime.CompilerServices;
 using System;
+using System.Globalization;
 
 namespace Data
 {
@@ -38,10 +39,21 @@ namespace Data
             dataAdd = DateTime.Now;
             newData = dataAdd.AddYears(6);
             Console.WriteLine(newData);
-            
+
             newData = dataAdd.AddYears(-2);
             Console.WriteLine(newData);
 
+            Console.WriteLine("\n================================\n");
+
+            var ptBr = new CultureInfo("pt-BR");
+            var ptPt = new CultureInfo("pt-PT");
+            var en = new CultureInfo("en-US");
+            var de = new CultureInfo("de-DE");
+
+            Console.WriteLine(DateTime.Now.ToString("D", ptBr));
+            Console.WriteLine(DateTime.Now.ToString("D", ptPt));
+            Console.WriteLine(DateTime.Now.ToString("D", en));
+            Console.WriteLine(DateTime.Now.ToString("D", de));
 
             Console.ReadKey();
         }
