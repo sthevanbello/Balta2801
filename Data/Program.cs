@@ -60,6 +60,18 @@ namespace Data
 
             Console.WriteLine(dataUtc);
 
+            Console.WriteLine(dataUtc.ToLocalTime());
+
+            Console.WriteLine("\n================================\n");
+            var timezones = TimeZoneInfo.GetSystemTimeZones();
+            foreach (var timezone in timezones)
+            {
+                Console.WriteLine(timezone.Id);
+                Console.WriteLine(timezone);
+                Console.WriteLine(TimeZoneInfo.ConvertTimeFromUtc(dataUtc, timezone));
+                Console.WriteLine("_________");
+            }
+
             Console.ReadKey();
         }
     }
