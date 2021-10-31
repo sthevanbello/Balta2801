@@ -38,7 +38,7 @@ namespace Cronometer
                     Start(int.Parse(time), EType.minute);
                     break;
                 case "0":
-                    Console.WriteLine("End of program")
+                    Console.WriteLine("End of program");
                     break;
                 default:
                     Menu();
