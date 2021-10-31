@@ -55,6 +55,11 @@ namespace Data
             Console.WriteLine(DateTime.Now.ToString("D", en));
             Console.WriteLine(DateTime.Now.ToString("D", de));
 
+            Console.WriteLine("\n================================\n");
+            var dataUtc = DateTime.UtcNow;
+
+            Console.WriteLine(dataUtc);
+
             Console.ReadKey();
         }
     }
