@@ -81,6 +81,15 @@ namespace Data
             Console.WriteLine(timeSpanDiaHora.Days);
             Console.WriteLine(timeSpanDiaHora.Add(new TimeSpan(12, 0, 0)));
 
+            Console.WriteLine($"Today ({DateTime.Now.DayOfWeek}) is weekend? {IsWeekend(DateTime.Now.DayOfWeek)}");
+
+            Console.WriteLine(DateTime.Now.IsDaylightSavingTime());
+
+            static bool IsWeekend(DayOfWeek today){
+                return today == DayOfWeek.Saturday || today == DayOfWeek.Sunday;
+            }
+
+
             Console.ReadKey();
         }
     }
