@@ -76,6 +76,10 @@ namespace Data
             Console.WriteLine(timeSpan);
             var timeSpan2 = new TimeSpan(1, 15, 25);
             Console.WriteLine(timeSpan2);
+            var timeSpanDiaHora = new TimeSpan(25,1, 15, 25);
+            Console.WriteLine(timeSpanDiaHora);
+            Console.WriteLine(timeSpanDiaHora.Days);
+            Console.WriteLine(timeSpanDiaHora.Add(new TimeSpan(12, 0, 0)));
 
             Console.ReadKey();
         }
