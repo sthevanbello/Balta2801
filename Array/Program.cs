@@ -1,12 +1,12 @@
 ﻿using System;
 
-namespace Money
+namespace Array
 {
     class Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Working with Money");
+            Console.WriteLine("Working with Array");
         }
     }
 }
